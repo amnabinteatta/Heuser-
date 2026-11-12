@@ -1,1 +1,39 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Sequence</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-container">
+    <header class="header-row">
+      <h1>Neon Sequence</h1>
+      <button id="mute-btn" class="mute-btn" aria-label="Toggle sound" aria-pressed="false" type="button">
+        <span id="mute-icon" aria-hidden="true">🔊</span>
+        <span id="mute-text">Sound: ON</span>
+      </button>
+    </header>
+    
+    <div class="dashboard-strip">
+      <div id="score-display">Score: 0</div>
+      <div id="high-score-display">High Score: 0</div>
+    </div>
+    <div id="status-message" role="status" aria-live="polite">Press Start to Play</div>
+    <div id="button-grid" role="group" aria-label="Pattern memory buttons">
+      <button id="btn-green" class="color-btn" data-color="cyan" disabled aria-label="Cyan button"></button>
+      <button id="btn-red" class="color-btn" data-color="pink" disabled aria-label="Pink button"></button>
+      <button id="btn-yellow" class="color-btn" data-color="yellow" disabled aria-label="Yellow button"></button>
+      <button id="btn-blue" class="color-btn" data-color="purple" disabled aria-label="Purple button"></button>
+    </div>
+    <div class="controls">
+      <button id="start-btn" type="button">Start</button>
+      <button id="pause-btn" type="button" disabled>Pause</button>
+    </div>
+    <div class="utility-controls">
+      <button id="reset-data-btn" class="reset-btn" type="button" aria-label="Reset saved high score and sound settings">Reset Data</button>
+    </div>
+  </main>
+  <script src="script.js"></script>
