@@ -1,0 +1,35 @@
+/* ==========================================================================
+   CS CRP HOMEWORK 9 — POKÉMON CREATURE DISCOVERY LAB STYLES
+   Author: Amna Binte Atta
+   Design: Futuristic Discovery Deck & Specimen Telemetry
+   ========================================================================== */
+:root {
+  --bg-deep: #17151F;
+  --bg-surface: #1e1b29;
+  --bg-surface-elevated: #262235;
+  --bg-glass: rgba(23, 21, 31, 0.82);
+  --bg-glass-card: rgba(30, 27, 43, 0.72);
+  --color-lime: #D4FF4F;
+  --color-lime-glow: rgba(212, 255, 79, 0.35);
+  --color-purple: #9B5DE5;
+  --color-purple-glow: rgba(155, 93, 229, 0.35);
+  --color-coral: #FF6B4A;
+  --color-coral-glow: rgba(255, 107, 74, 0.35);
+  --color-cyan: #00F0FF;
+  --color-lavender: #C8B6FF;
+  --color-lavender-muted: #8e80ab;
+  --text-primary: #f6f4fb;
+  --text-secondary: #C8B6FF;
+  --text-muted: #8b80a6;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --border-subtle: rgba(200, 182, 255, 0.15);
+  --border-active: rgba(212, 255, 79, 0.5);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Pokémon Elemental Types */
