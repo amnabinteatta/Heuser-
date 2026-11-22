@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Creature Discovery Lab — CS CRP Homework 9</title>
+  <meta name="description" content="Interactive digital creature discovery laboratory using live data from PokeAPI.">
+  <!-- Distinctive Google Fonts: Syne & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/api/style.css">
+</head>
+<body class="lab-body">
+  <!-- Ambient Radar Canvas -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+  <!-- Top Laboratory Control Bar -->
+  <header class="lab-topbar">
+    <div class="topbar-left">
+      <a href="/" class="return-home-btn" id="return-home-btn" title="Return to Homework 9 Home Hub">
+        <span class="btn-arrow" aria-hidden="true">&larr;</span>
+        <span>Return to Home</span>
+      </a>
+      <span class="lab-protocol-tag mono-code">SPECIMEN_SCANNER // VER 3.2</span>
+    </div>
+    <div class="topbar-right">
+      <div class="api-status-indicator">
+        <span class="status-dot online" id="status-dot"></span>
+        <span class="mono-code" id="status-label">POKEAPI: CONNECTED</span>
+      </div>
+      <div class="specimen-counter mono-code">
+        DISCOVERED: <span id="counter-val" class="highlight-lime">0</span>
+      </div>
+    </div>
+  </header>
+  <!-- Main Container -->
+  <main class="discovery-container">
