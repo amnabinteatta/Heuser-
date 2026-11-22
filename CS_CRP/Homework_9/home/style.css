@@ -1,0 +1,36 @@
+/* ==========================================================================
+   CS CRP HOMEWORK 9 — CENTRAL DIGITAL HUB STYLES
+   Author: Amna Binte Atta
+   Palette:
+     - Deep Charcoal:   #17151F (Primary background)
+     - Electric Purple: #9B5DE5 (Portfolio identity & glow)
+     - Acid Lime:       #D4FF4F (Active indicators & PokeAPI accent)
+     - Neon Cyan:       #00F0FF (Game card & futuristic accents)
+     - Coral Orange:    #FF6B4A (Action highlights & energy)
+     - Soft Lavender:   #C8B6FF (Secondary typography & borders)
+   ========================================================================== */
+:root {
+  --bg-deep: #17151F;
+  --bg-surface: #1e1b2a;
+  --bg-surface-elevated: #262235;
+  --bg-glass: rgba(26, 23, 38, 0.78);
+  --bg-glass-card: rgba(30, 27, 43, 0.7);
+  --color-purple: #9B5DE5;
+  --color-purple-glow: rgba(155, 93, 229, 0.35);
+  --color-lime: #D4FF4F;
+  --color-lime-glow: rgba(212, 255, 79, 0.3);
+  --color-cyan: #00F0FF;
+  --color-cyan-glow: rgba(0, 240, 255, 0.3);
+  --color-coral: #FF6B4A;
+  --color-coral-glow: rgba(255, 107, 74, 0.3);
+  --color-lavender: #C8B6FF;
+  --color-lavender-muted: #9586b8;
+  --text-primary: #f6f4fb;
+  --text-secondary: #C8B6FF;
+  --text-muted: #8b80a6;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --border-subtle: rgba(200, 182, 255, 0.14);
+  --border-hover: rgba(200, 182, 255, 0.4);
+  --radius-sm: 8px;
