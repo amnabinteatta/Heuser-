@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS CRP Homework 9 — Digital Hub</title>
+  <meta name="description" content="Central Hub for Amna Binte Atta's CS CRP Homework 9 Python Flask Web Server.">
+
+  <!-- Distinctive Google Fonts: Syne & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/home/style.css">
+</head>
+<body class="hub-body">
+
+  <!-- Ambient Interactive Background Canvas -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient Decorative Glows -->
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+
+  <!-- Top System Status Strip -->
+  <header class="hub-status-strip">
+    <div class="status-pill">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span class="mono-code">SERVER STATUS: ONLINE (FLASK 3.1)</span>
+    </div>
+    <div class="server-meta mono-code">
+      <span>CS CRP &bull; HOMEWORK 9</span>
+      <span class="divider">/</span>
+      <span>RENDER CLOUD DEPLOYMENT</span>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="hub-container">
+
+    <!-- Hero Title & Introduction -->
+    <section class="hub-hero">
+      <div class="hero-tag mono-code">[ MULTI-ROUTE BACKEND SYSTEM ]</div>
+      <h1 class="hero-title">WELCOME TO THE<br><span class="gradient-text">DIGITAL HUB</span></h1>
+      <p class="hero-subtitle">
+        An interactive multi-route web application created by <strong>Amna Binte Atta</strong>. Powered by a Python Flask server, serving interactive web applications, creative portfolio chambers, and live REST API creature discovery.
+      </p>
+    </section>
+
+    <!-- Three Primary Navigation Cards -->
+    <section class="destinations-section" aria-label="Explore Destinations">
+      <div class="cards-grid">
+
+        <!-- 1. Play My Game -->
+        <article class="destination-card card-game">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="card-header">
+            <span class="route-tag mono-code">ROUTE: /game</span>
+            <span class="badge badge-cyan">HW 6</span>
+          </div>
+
+          <div class="card-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 64 64" class="card-svg">
+              <rect x="8" y="16" width="48" height="32" rx="10" fill="#141a24" stroke="#00F0FF" stroke-width="2"/>
+              <!-- D-Pad -->
+              <path d="M22 26 v12 M16 32 h12" stroke="#00F0FF" stroke-width="3" stroke-linecap="round"/>
+              <!-- Action Buttons -->
+              <circle cx="44" cy="28" r="3" fill="#FF007F"/>
+              <circle cx="50" cy="34" r="3" fill="#FFE600"/>
+              <circle cx="38" cy="34" r="3" fill="#00F0FF"/>
+              <circle cx="44" cy="40" r="3" fill="#9B5DE5"/>
+            </svg>
+          </div>
+
+          <h2 class="card-title">Neon Sequence</h2>
+          <p class="card-desc">
+            Test your memory, pattern recognition, and focus in an interactive retro-neon sequence challenge with audio-visual cues and high score persistence.
+          </p>
+
+          <div class="card-tech mono-code">
+            <span>HTML5</span> &bull; <span>CSS3</span> &bull; <span>JS</span> &bull; <span>Web Audio</span>
+          </div>
+
+          <a href="/game" class="card-action-btn btn-cyan" id="btn-to-game">
+            <span>Play My Game</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </article>
+
+        <!-- 2. Explore My Portfolio -->
+        <article class="destination-card card-portfolio">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="card-header">
+            <span class="route-tag mono-code">ROUTE: /portfolio</span>
+            <span class="badge badge-purple">HW 8</span>
+          </div>
+
+          <div class="card-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 64 64" class="card-svg">
+              <circle cx="32" cy="32" r="24" fill="#1b1626" stroke="#9B5DE5" stroke-width="2"/>
+              <circle cx="32" cy="32" r="16" fill="none" stroke="#D4FF4F" stroke-width="1.5" stroke-dasharray="4,2"/>
+              <circle cx="32" cy="32" r="8" fill="#FF6B4A"/>
+              <!-- Floating satellite nodes -->
+              <circle cx="16" cy="18" r="2.5" fill="#C8B6FF"/>
+              <circle cx="48" cy="18" r="2.5" fill="#D4FF4F"/>
+              <circle cx="50" cy="46" r="2.5" fill="#FF6B4A"/>
+            </svg>
+          </div>
+
+          <h2 class="card-title">The Creative Lab</h2>
+          <p class="card-desc">
+            Enter an unconventional personal portfolio designed as an interactive laboratory exploring identity, projects, achievements, and future aspirations.
+          </p>
+
+          <div class="card-tech mono-code">
+            <span>5 Chambers</span> &bull; <span>Spatial UI</span> &bull; <span>Synthesizer</span>
+          </div>
+
+          <a href="/portfolio" class="card-action-btn btn-purple" id="btn-to-portfolio">
+            <span>Explore My Portfolio</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </article>
+
+        <!-- 3. Discover Pokémon -->
+        <article class="destination-card card-api">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="card-header">
+            <span class="route-tag mono-code">ROUTE: /api</span>
+            <span class="badge badge-lime">NEW API</span>
+          </div>
+
+          <div class="card-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 64 64" class="card-svg">
+              <!-- Pokeball styled discovery device -->
+              <circle cx="32" cy="32" r="24" fill="#171d15" stroke="#D4FF4F" stroke-width="2"/>
+              <path d="M8 32 h48" stroke="#D4FF4F" stroke-width="2.5"/>
+              <circle cx="32" cy="32" r="8" fill="#17151F" stroke="#D4FF4F" stroke-width="2.5"/>
+              <circle cx="32" cy="32" r="3.5" fill="#D4FF4F"/>
+              <!-- Energy arc -->
+              <path d="M20 14 a18 18 0 0 1 24 0" fill="none" stroke="#FF6B4A" stroke-width="1.5"/>
+            </svg>
+          </div>
+
+          <h2 class="card-title">Pokémon Creature Lab</h2>
+          <p class="card-desc">
+            Discover Pokémon species via live REST data from PokeAPI. Inspect base stats, abilities, and typings through interactive laboratory creature cards.
+          </p>
+
+          <div class="card-tech mono-code">
+            <span>Live PokeAPI</span> &bull; <span>Dynamic Search</span> &bull; <span>Stats UI</span>
+          </div>
+
+          <a href="/api" class="card-action-btn btn-lime" id="btn-to-api">
+            <span>Discover Pokémon</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Architecture & System Footer Information -->
+    <footer class="hub-footer">
+      <div class="architecture-box">
+        <div class="arch-col">
+          <span class="arch-label mono-code">BACKEND FRAMEWORK</span>
+          <span class="arch-val">Python 3 &bull; Flask WSGI &bull; Gunicorn</span>
+        </div>
+        <div class="arch-col">
+          <span class="arch-label mono-code">ROUTING ARCHITECTURE</span>
+          <span class="arch-val mono-code">/ &bull; /game &bull; /portfolio &bull; /api</span>
+        </div>
+        <div class="arch-col">
+          <span class="arch-label mono-code">DEPLOYMENT ENVIRONMENT</span>
+          <span class="arch-val">Render Web Service (Free Tier Ready)</span>
+        </div>
+      </div>
+      <p class="copyright-note mono-code">
+        CS CRP 2026 &bull; Designed &amp; Developed by Amna Binte Atta
+      </p>
+    </footer>
+
+  </main>
+
+  <script src="/home/script.js"></script>
+</body>
+</html>

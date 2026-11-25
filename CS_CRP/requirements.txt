@@ -1,0 +1,4 @@
+# CS CRP Homework 9 — Python Dependencies
+# Compatible with local development and Render Cloud Web Service deployment
+Flask>=3.0.0
+gunicorn>=21.0.0
